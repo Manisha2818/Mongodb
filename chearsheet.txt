@@ -1,0 +1,83 @@
+Create a new or switch database
+view all database
+show dbs
+Create a new or switch database
+use dbName
+
+View current database
+db
+
+Delete database
+db.dropDatabase()
+
+MongoDb commands for collections
+Show Collections
+show collections
+
+Create a collection name 'myComments'
+db.createCollection('myComments')
+
+Drop a collection named 'myComments'
+db.myComments.drop()
+
+Mongodb commands for rows:
+Show all rows in a collection
+db.comments.find()
+
+Show all row in a collection (Pritified)
+db.commnets.find().pretty()
+
+Find the first row matching the object
+db.comments.findOne({name:'Manisha})
+
+Insert one row
+db.comments.insert({
+    'name': 'Manisha',
+    'lang': 'Javascript',
+    'member_since':'5
+})
+
+Insert many rows
+db.comments.insertMany([{
+    'name': 'Manisha',
+    'lang': 'Javascript',
+    'member_since':'5
+},
+{
+    'name': 'Varsha',
+    'lang': 'C++',
+    'member_since':5
+},
+{
+    'name': 'Utkarsh',
+    'lang': 'Python',
+    'member_since':5
+}])
+
+Search in a MongoDB database
+db.comments.find({lang:'Python'})
+
+Limit the number of rows in output
+db.comments.find().limit(2)
+
+Count. the number of rows in the output
+db.comments.find().count()
+
+Update a row
+db.comments.update({name:'Manisha'},
+{
+    'name': 'Manisha',
+    'lang': 'Javascript',
+    'member_since':'51
+})
+
+
+
+
+
+
+
+
+
+
+
